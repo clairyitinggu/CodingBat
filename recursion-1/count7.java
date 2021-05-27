@@ -11,9 +11,17 @@ count7(123) → 0
 public int count7(int n) {
 
   //77 % 10 = 7, 77/ 10  7
+  //first version
   //base case
-  if( n == 0) return 0;
-  if (n % 10 == 7 ) return 1 + count7(n / 10);
-  else return count7(n / 10);
+  // if( n == 0) return 0;
+  // if (n % 10 == 7 ) return 1 + count7(n / 10);
+  // else return count7(n / 10);
+
+  //second version
+  public int count7(int n) {
+  if(n == 0) return 0;
+
+  return n % 10 == 7 ? 1 + count7(n / 10) : count7(n / 10);
+}
 
 }

@@ -8,14 +8,18 @@ powerN(3, 3) → 27
 */
 
 public int powerN(int base, int n) {
-  if( n == 1){
-    return base;
-  }
+  // version 1
+  // if( n == 1){
+  //   return base;
+  // }
+  //
+  // if( n % 2 == 0){
+  //   return powerN(base, n / 2) * powerN(base, n / 2);
+  // }else{
+  //   return base * powerN(base, n / 2) * powerN(base, n / 2);
+  // }
 
-  if( n % 2 == 0){
-    return powerN(base, n / 2) * powerN(base, n / 2);
-  }else{
-    return base * powerN(base, n / 2) * powerN(base, n / 2);
-  }
-
+  // version 2
+  if( n == 0) return 1;
+  return base * powerN(base, n - 1);
 }

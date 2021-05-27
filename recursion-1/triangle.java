@@ -12,10 +12,12 @@ public int triangle(int rows) {
   if(rows == 0){
     return 0;
   }
+  //first version
+  // if(rows == 1){
+  //   return 1;
+  // }
+  //we don't need line 16-18.
 
-  if(rows == 1){
-    return 1;
-  }
-
+  //second version
   return rows + triangle(rows - 1);
 }

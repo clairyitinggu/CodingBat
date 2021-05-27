@@ -9,16 +9,18 @@ sumDigits(12) → 3
 */
 
 public int sumDigits(int n) {
-  if( n == 0){
-    return 0;
-  }
+  // first version
+  // if( n == 0){
+  //   return 0;
+  // }
+  // if( n == 1){
+  //   return 1;
+  // }
+  //
+  // int i = n % 10;//6  2
+  // return i + sumDigits( n/10 );//12  0
 
-  if( n == 1){
-    return 1;
-  }
-
-  //126  12
-
-  int i = n % 10;//6  2
-  return i + sumDigits( n/10 );//12  0
+  //second version
+  if(n == 0) return 0;
+  return n % 10 + sumDigits(n / 10);
 }

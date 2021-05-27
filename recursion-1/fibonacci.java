@@ -8,12 +8,17 @@ fibonacci(2) → 1
 */
 
 public int fibonacci(int n) {
-  if( n == 0){
-    return 0;
-  }
-  if (n == 1){
-    return 1;
-  }
+  // first version
+  // if( n == 0){
+  //   return 0;
+  // }
+  // if (n == 1){
+  //   return 1;
+  // }
+  //change the line 11 - 16 to line 19
+
+  //second version
+  if(n <= 1) return n;
 
   return fibonacci(n-2) + fibonacci(n-1);
 }
